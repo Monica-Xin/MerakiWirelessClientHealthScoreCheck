@@ -66,8 +66,11 @@ function filterAndDisplayData(days) {
   }
 
   var currentDate = new Date();
+  currentDate.setHours(0, 0, 0, 0); // Normalize the current date to the start of the day
+
   var startDate = new Date(currentDate);
-  startDate.setDate(currentDate.getDate() - days);
+  startDate.setDate(currentDate.getDate() - days); // Set the start date
+  startDate.setHours(0, 0, 0, 0); // Ensure the start date is also normalized
 
   var data = summarySheet.getDataRange().getValues();
   var headers = data[0];
@@ -75,12 +78,15 @@ function filterAndDisplayData(days) {
 
   for (var i = 1; i < data.length; i++) {
     var rowDate = new Date(data[i][0]);
+    rowDate.setHours(0, 0, 0, 0); // Normalize the date of each row
+
+    // Only keep rows within the range
     if (rowDate >= startDate && rowDate <= currentDate) {
       filteredData.push(data[i]);
     }
   }
 
-  // Clear old data but keep A1:A6 and B1:B5 intact
+  // Clear old data but keep A1:A6 and B1:B5
   clearGetInfoData(getInfoSheet);
 
   if (filteredData.length > 1) {
