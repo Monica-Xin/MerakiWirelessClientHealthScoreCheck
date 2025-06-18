@@ -30,7 +30,8 @@ Ensure the Meraki API key has the necessary permissions to read and modify devic
 1.TimmerTrigger
 2.SummaryTrigger
 3.GetInfo
-If not, just go to each function and click ""run"", about ""GetInfo"" function, choose ""setupDropdownAndChar"" sub-function to run"												
+If not, just go to each function and click ""run"", about ""GetInfo"" function, choose ""setupDropdownAndChar"" sub-function to run"
+About "Clear" button, please note it will permanently delete all sheets except for 'Read Me' and 'GetInfo', and the operation cannot be undone. Please click it with caution.
 "As KB mentioned, If the dashboard does not have enough data within the past 2 hours, or if it's a wired client, the Onboarding/Performance columns will show N/A in the respective fields. 
 This includes clients that are connected to the network but are not sending any traffic or are connected to an AP that cannot run firmware MR27.5 or above.
 A client may also show N/A in the Onboarding column if there is no connection activity in the past 2 hours from that specific device.
