@@ -47,9 +47,12 @@ Ensure the Meraki API key has the necessary permissions to read and modify devic
 
 This tool needs to collect data first, so after filling in the Network ID and API Key in the "GetInfo" sheet, please go to Google Apps Script's Triggers and ensure that the following triggers are running properly:
 
-TimerTrigger
-SummaryTrigger
-GetInfo
+-TimerTrigger
+
+-SummaryTrigger
+
+-GetInfo
+
 (If not, just go to each function and click "Run". For the "GetInfo" function, choose the "setupDropdownAndChar" sub-function to run.)
 
 About the "Clear" button:**Please note it will permanently delete all sheets except for 'Read Me' and 'GetInfo', and the operation cannot be undone.Use it with caution.**
